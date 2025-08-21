@@ -3,7 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home', { title: 'Outfit Tracker' });
+  res.render('home', { 
+    title: 'Check My Fit',
+  });
 });
 
 module.exports = router;
