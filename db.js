@@ -16,6 +16,7 @@ const connection = mysql.createConnection({
 
 connection.connect(err => {
   if (err) {
+    console.error(process.env.MYSQL_HOST, process.env.MYSQL_PORT);
     console.error('Connection failed:', err.message);
   } else {
     console.log('Connected to MySQL: clothing_calendar');
