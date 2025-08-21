@@ -4,8 +4,13 @@ const db = require('../db');
 
 /* GET articles listing. */
 router.get('/', function(req, res, next) { // INDEX
-  res.render('articles/index', {
-    title: 'Articles'
+  let query = `SELECT * FROM article`;
+  db.query(query, (err, result, fields) => {
+    if (err) throw err;
+    res.render('articles/index', {
+      title: 'My clothes',
+      articles: result
+    });
   });
 });
 router.get('/new', (req, res, next) => {
@@ -19,7 +24,7 @@ router.get('/:id', (req, res, next) => {
     if (err) throw err;
     console.log(result);
     res.render('articles/show', {
-      title: "My clothes",
+      title: `${result[0].color} ${result[0].category}`,
       article: result[0]
     });
   });

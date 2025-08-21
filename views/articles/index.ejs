@@ -2,6 +2,23 @@
 
 <h1><%= title %></h1>
 
+<table>
+  <tr>
+    <th>Brand</th>
+    <th>Category</th>
+    <th>Color</th>
+    <th>Pattern</th>
+  </tr>
+  <% for (article of articles) { %>
+    <tr>
+      <td><%= article.brand %></td>
+      <td><%= article.category %></td>
+      <td><%= article.color %></td>
+      <td><%= article.pattern %></td>
+    </tr>
+  <% } %>
+</table>
+
 <div>
   <a href="/articles/new">Add to your closet...</a><br>
   <a href="/">Back to Home</a>
