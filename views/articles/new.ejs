@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<h1><%= title %></h1>
+
+<div>
+  <p>Add an article of clothing</p>
+  
+  <form action="/articles/new" method="post">
+    <label for="brand">Clothing brand</label>
+    <input type="text" name="brand" id="brand" required>
+    <br>
+    <label for="category">Clothing category</label>
+    <input type="text" name="category" id="category" placeholder="Shirt" required>
+    <br>
+    <label for="color">Clothing color</label>
+    <input type="text" name="color" id="color" placeholder="Red" required>
+    <br>
+    <label for="pattern">Clothing pattern</label>
+    <input type="text" name="pattern" id="pattern" placeholder="Striped" required>
+    <br>
+    <input type="submit" value="Add article">
+    <a href="/articles">Cancel</a>
+  </form>
+  <p><a href="/">Back to homepage</a></p>
+</div>
+
+<%- include('../partials/footer') %>
