@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= outfit.title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Outfit: <%= outfit.title %></h1>
-    <p><a href="/outfits">All outfits</a></p>
-  </body>
-</html>
+<%- include('../partials/header') %>
+
+<h1>Outfit: <%= outfit.title %></h1>
+
+<div>
+  <a href="/outfits">All Outfits</a>
+  <a href="/">Home</a>
+</div>
+
+<%- include('../partials/footer') %>

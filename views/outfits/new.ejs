@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Create a new outfit</p>
-    <form action="/outfits/new" method="post">
-      <label for="title">Outfit title</label>
-      <input type="text" name="title" id="title">
-      <br>
-      <label for="item">Select item</label><br>
-      <select name="item" id="item" multiple>
-        <option value="a">Lorem</option>
-        <option value="b">Ipsum</option>
-        <option value="c">Dolor</option>
-        <option value="d">Sit</option>
-        <option value="e">Amet</option>
-      </select>
-      <br>
-      <input type="submit" value="Create outfit">
-    </form>
-    <p><a href="/">Back to all outfits</a></p>
-  </body>
-</html>
+<%- include('../partials/header') %>
+
+<h1><%= title %></h1>
+
+<div>
+  <p>Create a new outfit</p>
+  
+  <form action="/outfits/new" method="post">
+    <label for="title">Outfit Title</label>
+    <input type="text" name="title" id="title" placeholder="Enter outfit name" required>
+    <br>
+    <label for="item">Select Items</label>
+    <select name="item" id="item" multiple>
+      <option value="a">Lorem</option>
+      <option value="b">Ipsum</option>
+      <option value="c">Dolor</option>
+      <option value="d">Sit</option>
+      <option value="e">Amet</option>
+    </select>
+    <br>
+    <input type="submit" value="Create Outfit">
+    <a href="/outfits">Cancel</a>
+  </form>
+  <p><a href="/">Back to all outfits</a></p>
+</div>
+
+<%- include('../partials/footer') %>
