@@ -1,1 +1,10 @@
-Hello! The id of this article is <%= id %>.
+<%- include('../partials/header') %>
+
+<h1>My clothes</h1>
+
+<p>Brand: <%= article.brand %></p>
+<p>Category: <%= article.category %></p>
+<p>Color: <%= article.color %></p>
+<p>Pattern: <%= article.pattern %></p>
+
+<%- include('../partials/footer') %>
