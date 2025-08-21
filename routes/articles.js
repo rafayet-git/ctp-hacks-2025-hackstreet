@@ -13,12 +13,12 @@ router.get('/', function(req, res, next) { // INDEX
     });
   });
 });
-router.get('/new', (req, res, next) => {
+router.get('/new', (req, res, next) => { // NEW
   res.render('articles/new', {
     title: 'Create article'
   });
 });
-router.get('/:id', (req, res, next) => {
+router.get('/:id', (req, res, next) => { // SHOW
   let query = `SELECT * FROM article WHERE id=${req.params.id}`;
   db.query(query, function (err, result, fields) {
     if (err) throw err;
@@ -29,7 +29,7 @@ router.get('/:id', (req, res, next) => {
     });
   });
 });
-router.post('/new', (req, res, next) => {
+router.post('/new', (req, res, next) => { // CREATE
   // TODO: validate data
   // TODO: save data in DB
   let sql = `INSERT INTO article (brand, category, color, pattern) VALUES ('${req.body.brand}', '${req.body.category}', '${req.body.color}', '${req.body.pattern}')`
