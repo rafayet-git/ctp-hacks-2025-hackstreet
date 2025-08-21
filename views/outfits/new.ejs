@@ -11,11 +11,9 @@
     <br>
     <label for="item">Select Items</label>
     <select name="item" id="item" multiple>
-      <option value="a">Lorem</option>
-      <option value="b">Ipsum</option>
-      <option value="c">Dolor</option>
-      <option value="d">Sit</option>
-      <option value="e">Amet</option>
+      <% for (article of articles) { %>
+        <option value="<%= article.id %>"><%= article.category %>, <%= article.brand %>, <%= article.pattern %>, <%= article.color %></option>
+      <% } %>
     </select>
     <br>
     <input type="submit" value="Create Outfit">
