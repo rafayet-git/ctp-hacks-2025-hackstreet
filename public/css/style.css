@@ -313,3 +313,16 @@ input:focus, select:focus, textarea:focus {
     padding: 1rem;
   }
 }
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+.calendar td {
+  border: 1px solid black;
+  height: 6em;
+  transition: outline 0.2s;
+}
+.calendar td:hover {
+  outline: 4px solid #4caceb;
+}

@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+Outfits for <%= title %>
+
+<ul>
+    <% for (let outfit of outfits) { %>
+        <li>
+            Outfit ID: <%= outfit.outfit_id %><br>
+            Clothes: <%= outfit.articles ?? "None" %>
+        </li>
+    <% } %>
+</ul>
+
+<%- include('../partials/footer') %>
