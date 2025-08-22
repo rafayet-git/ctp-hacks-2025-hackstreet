@@ -3,7 +3,7 @@
 <h1><%= title %></h1>
 
 <div class="closet-container">
-  <div class="outfits-section">
+  <div class="articles-section">
     <h2>All Outfits</h2>
       <table class="clothing-table">
         <tr>
@@ -21,7 +21,7 @@
             </td>
             <!-- <td><%= new Date(outfit.created_at).toLocaleDateString() %></td> -->
             <td>
-              <a href="/outfits/<%= outfit.outfit_id %>">Details</a>
+              <a href="/outfits/<%= outfit.outfit_id %>" >Details</a>
               <button class="save-btn" 
                       data-id="<%= outfit.outfit_id %>" 
                       onclick="saveOutfit(this)">
@@ -33,7 +33,7 @@
       </table>
   </div>
 
-  <div class="saved-outfits-section">
+  <div class="saved-articles-section">
     <h2>Saved Outfits</h2>
     <div id="saved-outfits-container">
       <table id="saved-outfits-table" class="clothing-table">
