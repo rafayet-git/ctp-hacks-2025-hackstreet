@@ -2,9 +2,58 @@
 
 <h1><%= title %></h1>
 
-<div>
-  <p>View your outfits</p>
+<div class="closet-container">
+  <div class="outfits-section">
+    <h2>All Outfits</h2>
+      <table class="clothing-table">
+        <tr>
+          <th>Outfit</th>
+          <th>Articles</th>
+          <th>Likes</th>
+          <th>Actions</th>
+        </tr>
+        <% for (outfit of outfits) { %>
+          <tr data-outfit-id="<%= outfit.outfit_id %>">
+            <td><%= outfit.outfit_id %></td>
+            <td><%= outfit.articles || 'No articles' %></td>
+            <td>
+              <span id="likes-<%= outfit.outfit_id %>"><%= outfit.likes || 0 %></span>
+            </td>
+            <!-- <td><%= new Date(outfit.created_at).toLocaleDateString() %></td> -->
+            <td>
+              <a href="/outfits/<%= outfit.outfit_id %>">Details</a>
+              <button class="save-btn" 
+                      data-id="<%= outfit.outfit_id %>" 
+                      onclick="saveOutfit(this)">
+                Save
+              </button>
+            </td>
+          </tr>
+        <% } %>
+      </table>
+  </div>
+
+  <div class="saved-outfits-section">
+    <h2>Saved Outfits</h2>
+    <div id="saved-outfits-container">
+      <table id="saved-outfits-table" class="clothing-table">
+        <tr>
+          <th>Outfit</th>
+          <th>Articles</th>
+          <th>Likes</th>
+          <th>Actions</th>
+        </tr>
+        <tbody id="saved-outfits-body">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="navigation">
   <p><a href="/outfits/new">Create an outfit</a></p>
 </div>
+
+<script src="/js/outfits.js"></script>
 
 <%- include('../partials/footer') %>

@@ -211,8 +211,18 @@ a:hover {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.outfits-section,
+.saved-outfits-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 .articles-section h2,
-.saved-articles-section h2 {
+.saved-articles-section h2,
+.outfits-section h2,
+.saved-outfits-section h2 {
   color: #2c3e50;
   margin-bottom: 1rem;
   font-size: 1.5rem;
@@ -254,6 +264,27 @@ a:hover {
 
 .remove-btn:hover {
   background-color: #c0392b;
+}
+
+.like-btn {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.like-btn:hover:not(:disabled) {
+  background-color: #c2185b;
+}
+
+.like-btn:disabled {
+  background-color: #f8bbd9;
+  cursor: not-allowed;
 }
 
 /* Message styles */
