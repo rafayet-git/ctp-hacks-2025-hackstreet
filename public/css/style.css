@@ -313,7 +313,14 @@ textarea:focus {
   border: 1px solid black;
   height: 6em;
   transition: outline 0.2s;
+  text-align: right;
+  vertical-align: top;
+  padding: 0.5em;
 }
 .calendar td:hover {
   outline: 4px solid #4caceb;
+}
+.calendar a {
+  all: unset;
+  cursor: pointer;
 }

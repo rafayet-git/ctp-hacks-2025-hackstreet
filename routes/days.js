@@ -25,7 +25,6 @@ router.get('/:year/:month/:day', (req, res, next) => {
     `;
     db.query(query, (err, result, fields) => {
         if (err) throw err;
-        console.log(result);
         res.render('days/show',{
             title: today,
             outfits: result
