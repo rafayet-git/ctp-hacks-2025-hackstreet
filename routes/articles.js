@@ -13,11 +13,24 @@ router.get('/', function(req, res, next) { // INDEX
     });
   });
 });
+
+// API endpoint to get article details by ID (returns JSON)
+router.get('/api/:id', (req, res, next) => {
+  let query = `SELECT * FROM article WHERE id=${req.params.id}`;
+  db.query(query, function (err, result, fields) {
+    if (err) throw err;
+    if (result.length === 0) 
+      return res.status(404).json({ error: 'Article not found' });
+    res.json(result[0]);
+  });
+});
+
 router.get('/new', (req, res, next) => { // NEW
   res.render('articles/new', {
     title: 'Create article'
   });
 });
+
 router.get('/:id', (req, res, next) => { // SHOW
   let query = `SELECT * FROM article WHERE id=${req.params.id}`;
   db.query(query, function (err, result, fields) {
@@ -29,6 +42,7 @@ router.get('/:id', (req, res, next) => { // SHOW
     });
   });
 });
+
 router.post('/new', (req, res, next) => { // CREATE
   // TODO: validate data
   // TODO: save data in DB
@@ -36,8 +50,9 @@ router.post('/new', (req, res, next) => { // CREATE
   db.query(sql, function (err, result) {
     if (err) throw err;
     console.log("1 record inserted");
+    
+    res.redirect(`/articles`);
   });
-  res.redirect('/');
 });
 
 module.exports = router;
