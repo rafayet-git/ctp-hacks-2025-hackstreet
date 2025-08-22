@@ -2,7 +2,228 @@
 
 <h1><%= title %></h1>
 
-<div class="suggestions">
+<div class="suggestions-container">
+  
+  <!-- Popular Outfits Section -->
+  <section class="popular-suggestions">
+    <h2>Trending Outfits</h2>
+    <p class="section-description">Outfits based on your style & user popularity.</p>
+
+    <div class="outfit-grid">
+      <!-- Outfit 1 -->
+      <div class="outfit-card">
+        <div class="outfit-header">
+          <h3>Weekend Casual</h3>
+          <span class="likes-count">❤️ 42 likes</span>
+        </div>
+        <div class="outfit-items">
+          <div class="outfit-item">
+            <span class="item-category">Clothing 1:</span>
+            <span class="item-details">Nike, T-Shirt, Solid, Navy Blue</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 2:</span>
+            <span class="item-details">Levi's, Jeans, Denim, Dark Blue</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 3:</span>
+            <span class="item-details">Adidas, Sneakers, Solid, White</span>
+          </div>
+        </div>
+        <div class="outfit-actions">
+          <button class="save-btn" data-outfit="1">Save</button>
+        </div>
+      </div>
+
+      <!-- Outfit 2 -->
+      <div class="outfit-card">
+        <div class="outfit-header">
+          <h3>Business Casual</h3>
+          <span class="likes-count">❤️ 38 likes</span>
+        </div>
+        <div class="outfit-items">
+          <div class="outfit-item">
+            <span class="item-category">Clothing 1:</span>
+            <span class="item-details">H&M, Button-up, Striped, Light Blue</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 2:</span>
+            <span class="item-details">Zara, Chinos, Solid, Khaki</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 3:</span>
+            <span class="item-details">Cole Haan, Loafers, Leather, Brown</span>
+          </div>
+        </div>
+        <div class="outfit-actions">
+          <button class="save-btn" data-outfit="2">Save</button>
+        </div>
+      </div>
+
+      <!-- Outfit 3 -->
+      <div class="outfit-card">
+        <div class="outfit-header">
+          <h3>Glam Night</h3>
+          <span class="likes-count">❤️ 11 likes</span>
+        </div>
+        <div class="outfit-items">
+          <div class="outfit-item">
+            <span class="item-category">Clothing 1:</span>
+            <span class="item-details">Uniqlo, Sweater, Solid, Black</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 2:</span>
+            <span class="item-details">J.Crew, Dress Pants, Solid, Charcoal</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 3:</span>
+            <span class="item-details">Clarks, Oxford, Leather, Black</span>
+          </div>
+        </div>
+        <div class="outfit-actions">
+          <button class="save-btn" data-outfit="3">Save</button>
+        </div>
+      </div>
+
+      <!-- Outfit 4 -->
+      <div class="outfit-card">
+        <div class="outfit-header">
+          <h3>Summer Vibes</h3>
+          <span class="likes-count">❤️ 5 likes</span>
+        </div>
+        <div class="outfit-items">
+          <div class="outfit-item">
+            <span class="item-category">Clothing 1:</span>
+            <span class="item-details">Gap, Tank Top, Solid, White</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 2:</span>
+            <span class="item-details">Patagonia, Shorts, Solid, Olive Green</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 3:</span>
+            <span class="item-details">Vans, Canvas Sneakers, Solid, Navy</span>
+          </div>
+        </div>
+        <div class="outfit-actions">
+          <button class="save-btn" data-outfit="4">Save</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personalized Outfits Section -->
+  <section class="personalized-suggestions">
+    <h2>Your Personalized Outfits</h2>
+    <p class="section-description">Recommended outfits based on your saved clothing & preferences, including weather and style.</p>
+    
+    <div class="outfit-grid">
+      <!-- Personalized Outfit 1 -->
+      <div class="outfit-card">
+        <div class="outfit-header">
+          <h3>From Your Closet #1</h3>
+        </div>
+        <div class="outfit-items">
+          <div class="outfit-item">
+            <span class="item-category">Clothing 1:</span>
+            <span class="item-details">Your Navy Polo, Ralph Lauren</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 2:</span>
+            <span class="item-details">Your Khaki Shorts, J.Crew</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 3:</span>
+            <span class="item-details">Your White Sneakers</span>
+          </div>
+        </div>
+        <div class="outfit-actions">
+          <button class="save-btn" data-outfit="p1">Create Outfit</button>
+          <!-- <button class="add-missing-btn" data-outfit="p1">Add Missing Items</button> -->
+        </div>
+      </div>
+
+      <!-- Personalized Outfit 2 -->
+      <div class="outfit-card">
+        <div class="outfit-header">
+          <h3>From Your Closet #2</h3>
+        </div>
+        <div class="outfit-items">
+          <div class="outfit-item">
+            <span class="item-category">Clothing 1:</span>
+            <span class="item-details">Your Black T-Shirt, Uniqlo</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 2:</span>
+            <span class="item-details">Your Dark Jeans, Levi's</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 3 (suggested):</span>
+            <span class="item-details">Leather Jacket, Zara</span>
+          </div>
+        </div>
+        <div class="outfit-actions">
+          <button class="save-btn" data-outfit="p2">Create Outfit</button>
+          <button class="add-missing-btn" data-outfit="p2">Add Missing Items</button>
+        </div>
+      </div>
+
+      <!-- Personalized Outfit 3 -->
+      <div class="outfit-card">
+        <div class="outfit-header">
+          <h3>From Your Closet #3</h3>
+        </div>
+        <div class="outfit-items">
+          <div class="outfit-item">
+            <span class="item-category">Clothing 1:</span>
+            <span class="item-details">Your White Button-up, Express</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 2:</span>
+            <span class="item-details">Your Dress Pants, Banana Republic</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 3 (suggested):</span>
+            <span class="item-details">Brown Belt</span>
+          </div>
+        </div>
+        <div class="outfit-actions">
+          <button class="save-btn" data-outfit="p3">Create Outfit</button>
+          <button class="add-missing-btn" data-outfit="p3">Add Missing Items</button>
+        </div>
+      </div>
+
+      <!-- Personalized Outfit 4 -->
+      <div class="outfit-card">
+        <div class="outfit-header">
+          <h3>From Your Closet #4</h3>
+        </div>
+        <div class="outfit-items">
+          <div class="outfit-item">
+            <span class="item-category">Clothing 1:</span>
+            <span class="item-details">Your Gray Hoodie, Nike</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 2:</span>
+            <span class="item-details">Your Black Sweatpants, Adidas</span>
+          </div>
+          <div class="outfit-item">
+            <span class="item-category">Clothing 3:</span>
+            <span class="item-details">Your Running Shoes, Nike</span>
+          </div>
+        </div>
+        <div class="outfit-actions">
+          <button class="save-btn" data-outfit="p4">Create Outfit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Action Buttons -->
+  <div class="suggestions-actions">
+    <button class="refresh-suggestions-btn">🔄 Get New Suggestions</button>
+    <button class="customize-preferences-btn">⚙️ Customize Preferences</button>
+  </div>
 
 </div>
 
