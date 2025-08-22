@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const db = require('../db');
 const e = require('express');
+const moment = require('moment');
 
 /* GET outfits listing. */
 router.get('/', (req, res, next) => { // INDEX
@@ -73,7 +74,8 @@ router.get('/:id', (req, res) => { // SHOW
     if (err) throw err;
     res.render('outfits/show', {
       title: 'Outfit Details',
-      outfit: result[0]
+      outfit: result[0],
+      time_ago: moment(result[0].created_at).subtract(5,'hours').fromNow()
     });
   });
 });

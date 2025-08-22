@@ -9,6 +9,7 @@ var outfitsRouter = require('./routes/outfits');
 var articlesRouter = require('./routes/articles');
 var usersRouter = require('./routes/users');
 var suggestionsRouter = require('./routes/suggestions');
+var daysRouter = require('./routes/days');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/outfits', outfitsRouter);
 app.use('/articles', articlesRouter);
 app.use('/users', usersRouter);
 app.use('/suggestions', suggestionsRouter);
+app.use('/days', daysRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

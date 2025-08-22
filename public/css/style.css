@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,21 +5,20 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f8f9fa;
   padding: 20px;
 }
 
-/* Container for main content */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Header styles */
 .header {
   background-color: #2c3e50;
   padding: 1rem 0;
@@ -36,16 +34,14 @@ body {
   font-weight: 300;
 }
 
-/* Main content layout */
 .main-content {
   display: flex;
   min-height: 600px;
   background: white;
   border-radius: 0 0 8px 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Sidebar styles */
 .sidebar {
   width: 200px;
   background-color: #34495e;
@@ -87,7 +83,6 @@ body {
   border-top: none;
 }
 
-/* Content area */
 .content-area {
   flex: 1;
   padding: 2rem;
@@ -103,24 +98,25 @@ h1 {
   font-weight: 300;
 }
 
-/* Navigation and links */
 a {
   align-items: center;
   appearance: none;
   background-color: #fff;
   border: 1px solid #dbdbdb;
-  border-radius: .375em;
+  border-radius: 0.375em;
   box-shadow: none;
   box-sizing: border-box;
   color: #363636;
   cursor: pointer;
   display: inline-flex;
-  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
   font-size: 1rem;
   height: 2.5em;
   justify-content: center;
   line-height: 1.5;
-  padding: calc(.5em - 1px) 1em;
+  padding: calc(0.5em - 1px) 1em;
   position: relative;
   text-align: center;
   user-select: none;
@@ -136,15 +132,14 @@ a:hover {
   text-decoration: none;
 }
 
-/* Clothing table styles */
-.clothing-table{
+.clothing-table {
   border: 1px solid black;
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1rem;
 }
 
-.clothing-table th, 
+.clothing-table th,
 .clothing-table td {
   padding: 10px;
   border: 1px solid #ddd;
@@ -156,7 +151,6 @@ a:hover {
   font-weight: 600;
 }
 
-/* Closet container styles */
 .closet-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -169,7 +163,7 @@ a:hover {
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .articles-section h2,
@@ -181,7 +175,6 @@ a:hover {
   padding-bottom: 0.5rem;
 }
 
-/* Button styles for save/remove actions */
 .save-btn {
   background-color: #3498db;
   color: white;
@@ -198,12 +191,12 @@ a:hover {
 }
 
 .save-btn:disabled {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   cursor: not-allowed;
 }
 
 .save-btn.saved {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   cursor: not-allowed;
 }
 
@@ -222,7 +215,6 @@ a:hover {
   background-color: #c0392b;
 }
 
-/* Navigation section */
 .navigation {
   text-align: center;
   margin-top: 2rem;
@@ -233,6 +225,108 @@ a:hover {
 }
 
 /* Calendar placeholder - add styles as needed when calendar is implemented */
+/* Form elements styling */
+form {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .header .title {
+    font-size: 2rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    order: 2;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0.5rem;
+  }
+
+  .sidebar-btn {
+    white-space: nowrap;
+    min-width: 120px;
+    margin-right: 10px;
+    border-bottom: none;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .sidebar-btn:hover {
+    padding-left: 20px;
+  }
+
+  .content-area {
+    order: 1;
+    padding: 1rem;
+  }
+
+  .closet-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .articles-section,
+  .saved-articles-section {
+    padding: 1rem;
+  }
+}
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+.calendar td {
+  border: 1px solid black;
+  height: 6em;
+  transition: outline 0.2s;
+  text-align: right;
+  vertical-align: top;
+  padding: 0.5em;
+}
+.calendar td:hover {
+  outline: 4px solid #4caceb;
+}
+.calendar a {
+  all: unset;
+  cursor: pointer;
+}
+
 
 /* Suggestions page styles */
 .suggestions-container {
@@ -382,84 +476,4 @@ a:hover {
 
 .customize-preferences-btn:hover {
   background-color: #7f8c8d;
-}
-
-/* Form elements styling */
-form {
-  margin-bottom: 1rem;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-  margin-bottom: 1rem;
-}
-
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-  
-  .header .title {
-    font-size: 2rem;
-  }
-  
-  .main-content {
-    flex-direction: column;
-  }
-  
-  .sidebar {
-    width: 100%;
-    order: 2;
-  }
-  
-  .sidebar-nav {
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 0.5rem;
-  }
-  
-  .sidebar-btn {
-    white-space: nowrap;
-    min-width: 120px;
-    margin-right: 10px;
-    border-bottom: none;
-    border-radius: 4px;
-    text-align: center;
-  }
-  
-  .sidebar-btn:hover {
-    padding-left: 20px;
-  }
-  
-  .content-area {
-    order: 1;
-    padding: 1rem;
-  }
-  
-  .closet-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .articles-section,
-  .saved-articles-section {
-    padding: 1rem;
-  }
 }
