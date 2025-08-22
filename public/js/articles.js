@@ -40,11 +40,11 @@ function removeArticle(articleId) {
 }
 
 function displaySavedArticles() {
-    const savedArticleIds = JSON.parse(localStorage.getItem('savedArticles')) || [];
+    const savedArticles = JSON.parse(localStorage.getItem('savedArticles')) || [];
     const savedTable = document.getElementById('saved-articles-table');
     const savedTableBody = document.getElementById('saved-articles-body');
         
-    if (savedArticleIds.length === 0) {
+    if (savedArticles.length === 0) {
         savedTable.style.display = 'none';
     } else {
         savedTable.style.display = 'table';
@@ -52,7 +52,7 @@ function displaySavedArticles() {
         [...savedTableBody.children].forEach(child => child.remove());
 
         // Fetch article details for each saved ID and display them
-        fetchSavedArticleDetails(savedArticleIds);
+        fetchSavedArticleDetails(savedArticles);
     }
     
     updateSaveButtonStates();
