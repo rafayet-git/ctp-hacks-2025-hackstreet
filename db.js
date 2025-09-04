@@ -1,3 +1,30 @@
+/*
+Database Schema:
+
+CREATE TABLE article(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  brand VARCHAR(50),
+  category VARCHAR(50),
+  color VARCHAR(50),
+  pattern VARCHAR(50),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE outfits (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  likes INT (50),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE outfit_articles (
+  outfit_id INT NOT NULL,
+  article_id INT NOT NULL,
+  PRIMARY KEY (outfit_id, article_id),
+  FOREIGN KEY (outfit_id) REFERENCES outfits(id),
+  FOREIGN KEY (article_id) REFERENCES article(id)
+);
+*/
+
 require('dotenv').config();
 const fs = require('fs');
 
