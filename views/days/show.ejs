@@ -1,12 +1,14 @@
 <%- include('../partials/header') %>
 
+<a href="/" class="link">< Back to calendar</a>
+
 <h2>Outfits for <%= title %></h2>
 
 <ul>
     <% for (let outfit of outfits) { %>
         <li>
-            Outfit ID: <%= outfit.outfit_id %><br>
-            Clothes: <%= outfit.articles ?? "None" %>
+            <a href="/outfits/<%= outfit.outfit_id %>">Outfit ID: <%= outfit.outfit_id %></a><br>
+            Clothes: <%= outfit.articles ?? "None" %><br><br>
         </li>
     <% } %>
 </ul>
